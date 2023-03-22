@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>İngilizce - Türkçe Çeviri</title>
+<style type="text/css">
+#ing {
+	font-size: 16px;
+	font-weight: bold;
+	color: #00F;
+	background-color: #9F0;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	height: 150px;
+	width: 200px;
+	border: 1px solid #000;
+	float: left;
+}
+
+#turkce {
+	font-size: 16px;
+	font-weight: bold;
+	color: #F00;
+	background-color: #999;
+	text-align: center;
+	padding: 10px;
+	float: left;
+	height: 150px;
+	width: 200px;
+	border: 1px solid #000;
+	margin: 10px;
+}
+</style>
+<script type="text/javascript">
+var ingilizce=["border","div","color","text","width","height","background"];
+var turkce=["çerçeve","kutu","renk","yazı","genişlik","yükseklik","arkaplan"];
+function cevir(kelime)
+{
+         var yer=ingilizce.indexOf(kelime);
+		 document.getElementById("turksoz").value=turkce[yer];
+}
+</script>
+</head>
+
+<body>
+<div id="ing">
+  <form id="form1" name="form1" method="post">
+    <p>
+      <input type="text" name="ingsoz" id="ingsoz">
+    </p>
+    <p>
+      <input type="button" name="button" id="button" value="Çevir" onClick="cevir(document.form1.ingsoz.value)">
+    </p>
+  </form>
+</div>
+<div id="turkce">
+  <form id="form2" name="form2" method="post">
+    <input type="text" name="textfield" id="turksoz">
+  </form>
+</div>
+</body>
+</html>
